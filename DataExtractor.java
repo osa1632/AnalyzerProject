@@ -42,7 +42,7 @@ public class DataExtractor {
 	{
 		String urlData= Url.getUrl(buildDiffBotUrl(url));
 
-		JsonParser jp = new JsonParser(); //from gson
+		JsonParser jp = new JsonParser(); //from json
 		JsonElement root = jp.parse(urlData); //Convert the input stream to a json element
 		JsonObject rootobj = root.getAsJsonObject();
 		JsonArray jsonArray = rootobj.get("objects").getAsJsonArray();
